@@ -1,0 +1,62 @@
+body{
+    background: #222;
+}
+
+#box{
+    width: 100vw;
+    height: 100vh;
+    background: #0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#corazon{
+    width: 200px;
+    height: 200px;
+    background: #f00;
+    position: relative;
+    transform: rotate(45deg);
+    animation-name: zzz;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#corazon::before{
+    content: '';
+    width: 200px;
+    height: 200px;
+    background: #f00;
+    position: absolute;
+    border-radius: 50%;
+    top: -100px;
+}
+#corazon::after{
+    content: '';
+    width: 200px;
+    height: 200px;
+    background: #f00;
+    position: absolute;
+    border-radius: 50%;
+    left: -100px;
+}
+
+
+@keyframes zzz{
+    0%{
+        transform: scale(0.5) rotate(45deg);
+    }
+    /* 25%{
+        transform: scale(2) rotate(180deg);
+    }
+    50%{
+        transform: scale(0.5) rotate(180deg);
+    }
+    75%{
+        transform: scale(0.5) rotate(45deg);
+    } */
+    100%{
+        transform: scale(1) rotate(45deg);
+    }
+}
